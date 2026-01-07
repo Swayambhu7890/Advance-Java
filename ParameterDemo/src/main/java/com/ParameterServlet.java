@@ -28,13 +28,18 @@ public class ParameterServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
+		
 		String name = request.getParameter("username");
 		
 		pw.println("<html><body>");
+		pw.println("<h2>Using doGet</h2>");
+
 		pw.println("<h2>Welcome " +name+"</h2>");
 		pw.println("</body></html>");
+		
 		pw.close();
 
 	}
@@ -44,7 +49,21 @@ public class ParameterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+		
+		String name = request.getParameter("username");
+		String pass = request.getParameter("upass");
+		
+		pw.println("<html><body>");
+		pw.println("<h2>Using doPost</h2>");
+		
+		pw.println("<h2>Welcome " +name+"</h2>");
+		pw.println("<h4>Your Password is: "+pass+"</h4>");
+		
+		pw.println("</body></html>");
+		pw.close();
 	}
 
 }
