@@ -22,7 +22,7 @@ public class ServletOne extends HttpServlet {
      */
     public ServletOne() {
         super();
-        // TODO Auto-generated constructor stub
+        // HTTP Session
     }
 
 	/**
