@@ -28,7 +28,7 @@ public class ServletOne extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		try
 		{
@@ -38,7 +38,7 @@ public class ServletOne extends HttpServlet {
 			String s = request.getParameter("username");
 			pw.println("Welcome "+s);
 			
-			HttpSession hs = request.getSession();           //To generate the Session id in the container
+			HttpSession hs = request.getSession();                      //To generate the Session id in the container to set the attribute
 			hs.setAttribute("sname", s);
 			
 			pw.print("<a href = 'ServletTwo'>Visit</a>");

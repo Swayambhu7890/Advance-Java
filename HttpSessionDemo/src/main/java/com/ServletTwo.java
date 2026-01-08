@@ -28,16 +28,16 @@ public class ServletTwo extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		try
 		{
 			response.setContentType("text/html");
 			PrintWriter pw = response.getWriter();
 			
-			HttpSession hs = request.getSession();           
+			HttpSession hs = request.getSession();                                      //To retrieve data from session    
 
-			String s = (String)hs.getAttribute("sname");
+			String s = (String)hs.getAttribute("sname");                          //To retrieve data from sname convert that data to String and stored it in s
 			pw.println("Hello "+s);
 			pw.println("Website Under Development, Coming Soon!!");
 			
