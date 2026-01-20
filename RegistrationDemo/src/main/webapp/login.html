@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <!-- Message Area -->
+    <div id="message" style="display:none; margin-bottom:15px; font-weight:bold;"></div>
+
+    <form action="LoginServlet" method="post">
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <div class="divider"></div>
+
+    <p class="register-text">
+        If not registered?
+        <a href="register.html">Please Register</a>
+    </p>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const msg = params.get("msg");
+    const messageBox = document.getElementById("message");
+
+    if (msg === "success") {
+        messageBox.innerText = "Registration successful! Please login.";
+        messageBox.className = "success-msg";
+        messageBox.style.display = "block";
+    }
+
+    if (msg === "notregistered") {
+        messageBox.innerText = "Please register first.";
+        messageBox.className = "error-msg";
+        messageBox.style.display = "block";
+    }
+
+    if (msg === "invalid") {
+        messageBox.innerText = "Invalid email or password.";
+        messageBox.className = "error-msg";
+        messageBox.style.display = "block";
+    }
+</script>
+
+
+</body>
+</html>

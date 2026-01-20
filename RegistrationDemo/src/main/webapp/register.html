@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <!-- Message area -->
+    <div id="message" style="color:red; font-weight:bold; margin-bottom:10px;"></div>
+
+    <form action="RegisterServlet" method="post">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>City</label>
+        <select name="city" required>
+            <option value="">Select City</option>
+            <option>Pune</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Others</option>
+        </select>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <p class="already">
+        Already Registered? <a href="login.html">Please Login</a>
+    </p>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const msg = params.get("msg");
+    const box = document.getElementById("message");
+
+    if (msg === "already") 
+    {
+        box.innerText = "You are already registered. Please login.";
+    }
+
+    if (msg === "failed") 
+    {
+        box.innerText = "Registration failed. Try again.";
+    }
+
+    if (msg === "error") 
+    {
+        box.innerText = "Something went wrong. Please try later.";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+@charset "UTF-8";
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff1e6, #fdf6f0);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* Container */
+.container {
+    width: 380px;
+    padding: 16px 26px;   /* reduced padding */
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(6px);
+}
+
+/* Heading */
+.container h2 {
+    text-align: center;
+    margin-bottom: 10px;  /* reduced */
+    color: #4a148c;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a148c;
+}
+
+/* Inputs & Select */
+input,
+select {
+    width: 100%;
+    height: 34px;
+    padding: 5px 16px 5px 12px;  /* right spacing fixed */
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 2px solid #ff9800;
+    background: #fffaf2;
+    font-size: 13px;
+    box-sizing: border-box;     /* IMPORTANT */
+}
+
+
+/* Focus */
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 152, 0, 0.6);
+}
+
+/* Register Button */
+input[type="submit"] {
+    margin-top: 6px;
+    height: 38px;
+    background: linear-gradient(135deg, #ff9800, #9c27b0);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+/* Login Link */
+.login-link {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    color: #6a1b9a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.already {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6a1b9a;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(156, 39, 176, 0.3);
+}
+
+.already a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.already a:hover {
+    text-decoration: underline;
+}
+
