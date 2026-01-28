@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>        <!-- Base Tag of xml file --> <!--hibernate-mapping specifies to which class in database is to be mapped in table form  -->
+    <class name="test.Person" table="Person1234">
+    <id name="id" column="pid">                           <!-- To decide which column is primary key(only one id ,but it can have multiple property) -->
+    <generator class="increment"></generator>             <!-- Auto increment -->
+    </id>
+
+    <property name="name" column="pname"></property>    <!-- name = "name" attribute indicates name from a bean class  columns(actual columns created in database)-->
+    
+    <property name="age" column="page"></property>
+    
+    <property name="city" column="pcity"></property>
+
+    <property name="salary" column="psalary"></property>
+    </class>
+</hibernate-mapping>
