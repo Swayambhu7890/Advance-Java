@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+
+    <class name="test.Student" table="student12">
+
+        <id name="sid">
+            <generator class="increment"></generator>
+        </id>
+
+           <property name="name"></property>
+
+        <list name="courses" table="student_course" cascade="all">
+              <key column="sid"></key>
+              <index column="course_index"></index>
+              <many-to-many column="cid" class="test.Course"></many-to-many>
+        </list>
+    </class>
+
+</hibernate-mapping>
