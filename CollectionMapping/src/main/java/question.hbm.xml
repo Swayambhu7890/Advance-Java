@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name="test.Question" table="Questions">
+    <id name="id" column="eid">
+    <generator class="increment"></generator>
+    </id>
+
+    <property name="qname" column="qname"></property>
+    
+    <!-- As our answers is in List Format -->
+    <list name = "answers" table = "answers">
+    <key column = "qid"></key>                                    <!--It defines the foreign key column that links the answers table to the question table. -->
+    <index column = "type"></index>                               <!--type stores index values -->
+    <element column = "answer" type = "string"></element>
+    </list>
+
+    </class>
+</hibernate-mapping>
