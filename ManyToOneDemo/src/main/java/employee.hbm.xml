@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name="test.Employee" table="Emp12345">
+    <id name="empid" column="empid">
+    <generator class="increment"></generator>
+    </id>
+
+    <property name="name" column="ename"></property>
+    <property name="email" column="email"></property>
+
+<!-- Map this class to in terms of many-one relationship with address class -->
+    <many-to-one name = "address" cascade = "all"></many-to-one>
+
+    </class>
+</hibernate-mapping>
