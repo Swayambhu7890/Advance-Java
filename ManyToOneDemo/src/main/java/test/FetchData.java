@@ -13,8 +13,7 @@ public class FetchData {
 
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
-		
+
 				Configuration conf=new Configuration();
 				conf.configure("hibernate.cfg.xml");
 				
