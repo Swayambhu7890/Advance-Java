@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<!-- 1)type -->
+	
+	<!-- <bean id="person" class="com.model.Person"> -->
+	<!-- <constructor-arg value="Swayambhu" type = "java.lang.String"></constructor-arg> -->                         <!-- To inject the dependencies -->
+	<!-- <constructor-arg value="1001" type = "int"></constructor-arg> -->		
+	<!-- </bean> -->
+	
+	
+	<!-- bean definitions here -->
+	<!-- 2)index -->
+	
+	<!--  <bean id="person" class="com.model.Person"> -->
+	<!-- <constructor-arg value="Swayambhu" index = "0"></constructor-arg> -->                         <!-- To inject the dependencies -->
+	<!-- <constructor-arg value="1001" index = "1" type = "int"></constructor-arg> -->	
+	<!-- </bean> -->
+	
+	
+	<!-- bean definitions here -->
+	<!-- 3)ref(name) -->
+	
+	<bean id="person" class="com.model.Person">
+		<constructor-arg name = "name" value = "Swayambhu"></constructor-arg>                         <!-- To inject the dependencies -->
+		<constructor-arg name = "id" value = "1001"></constructor-arg>	
+	</bean>
+
+</beans>
