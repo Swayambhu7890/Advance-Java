@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<!-- Three ways to write Bean Definition -->
+	<!-- 1)Value as a Attribute -->
+	<bean id="u1" class="com.model.User">
+		<property name="name" value="Swayambhu"></property>                            <!-- To inject the dependencies -->
+	</bean>
+
+	<!-- 2)Value as a Field -->
+	<bean id="u2" class="com.model.User">
+		<property name="name">
+			<value>Raj</value>
+		</property>
+	</bean>
+	
+	<!-- 3)Adding fields as a xsi or p Schema  -->
+	<bean id = "u3" class = "com.model.User" p:name = "Rahul"></bean>
+
+</beans>
