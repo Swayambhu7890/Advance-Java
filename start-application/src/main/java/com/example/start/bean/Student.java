@@ -1,0 +1,58 @@
+package com.example.start.bean;
+
+public class Student 
+{
+    private int id;
+    private String name;
+    private double marks;
+    
+    //Default Constructor
+    public Student()
+    {
+    	
+    }
+    
+    //Parameterized Constructor
+	public Student(int id, String name, double marks) 
+	{
+		super();
+		this.id = id;
+		this.name = name;
+		this.marks = marks;
+	}
+
+    //getters and setters
+	public int getId() 
+	{
+		return id;
+	}
+	public void setId(int id) 
+	{
+		this.id = id;
+	}
+	public String getName() 
+	{
+		return name;
+	}
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
+	public double getMarks() 
+	{
+		return marks;
+	}
+	public void setMarks(double marks) 
+	{
+		this.marks = marks;
+	}
+	
+	//ToString Method
+	@Override
+	public String toString() 
+	{
+		return "Student [id=" + id + ", name=" + name + ", marks=" + marks + "]";
+	}
+    
+    
+}
